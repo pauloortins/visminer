@@ -19,7 +19,7 @@ public class NOC  implements IMetric<Integer>{
 	}
 
 	@Override
-	public Integer calculate(byte[] data) {
+	public Integer calculate(byte[] data, String path) {
 		
 		String content = new String(data);
 		

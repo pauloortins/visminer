@@ -16,7 +16,7 @@ public class LOC implements IMetric<Integer> {
 	}
 
 	@Override
-	public Integer calculate(byte[] data) {
+	public Integer calculate(byte[] data, String path) {
 		
 		String content = new String(data);
 		String [] lines = content.split("\n|\r|\r\n");

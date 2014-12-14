@@ -111,6 +111,11 @@ public class PersistenceFacade {
 		return metricDao.get(id);
 	}
 	
+	public List<MetricValue> getAllMetricValues() 
+	{
+		return metricValueDao.getAll();
+	}
+	
 	public void saveMetricsValues(List<MetricValue> metricsValues){
 		metricValueDao.saveAll(metricsValues);
 	}

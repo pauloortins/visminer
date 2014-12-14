@@ -19,7 +19,7 @@ public class NOM implements IMetric<Integer>{
 	}
 
 	@Override
-	public Integer calculate(byte[] data) {
+	public Integer calculate(byte[] data, String path) {
 		
 		int methodCounter = 0;
 		

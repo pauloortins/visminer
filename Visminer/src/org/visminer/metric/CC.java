@@ -25,7 +25,7 @@ public class CC implements IMetric<Integer> {
 	}
 
 	@Override
-	public Integer calculate(byte[] data) {
+	public Integer calculate(byte[] data, String path) {
 	
 		String content = new String(data);
 		
@@ -87,5 +87,4 @@ public class CC implements IMetric<Integer> {
 		}
 		
 	}
-
 }

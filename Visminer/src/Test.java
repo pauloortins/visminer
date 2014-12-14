@@ -15,11 +15,8 @@ public class Test {
 		visminer.configure("config.properties");
 		visminer.configureMetrics("metrics.xml");
 		
-		visminer.getAnalyzer().setRepositoryName("visminer")
-		                      .setRepositoryPath("/home/felipe/git/VismierTest/.git")
-		                      .setRepositoryRemoteName("visminer")
-		                      .setRepositoryRemoteOwner("fool")
-		                      .setRepositoryRemoteType(RemoteServiceType.GITHUB)
+		visminer.getAnalyzer().setRepositoryName("Visminer")
+		                      .setRepositoryPath("/Users/pauloortins/Documents/dev/github/MeuVisminer/.git")		                      
 		                      .setRepositoryType(RepositoryType.GIT);
 		
 		Repository repository = visminer.analyze();

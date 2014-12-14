@@ -4,4 +4,5 @@
 	<metric on="true" filter_extension="java">NOC</metric>
 	<metric on="true" filter_extension="java">CC</metric>
 	<metric on="true" filter_extension="java">NOM</metric>
+	<metric on="true" filter_extension="java">EC</metric>
 </metrics>

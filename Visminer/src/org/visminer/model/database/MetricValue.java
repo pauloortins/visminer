@@ -17,7 +17,7 @@ public class MetricValue implements Serializable {
 	@EmbeddedId
 	private MetricValuePK id;
 
-	@Column(name="value", length=45, nullable=false)
+	@Column(name="value", length=10000, nullable=false)
 	private String value;
 
 	//bi-directional many-to-one association to Metric

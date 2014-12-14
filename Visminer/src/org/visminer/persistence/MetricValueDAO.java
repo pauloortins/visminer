@@ -22,7 +22,21 @@ public class MetricValueDAO{
 		
 	}
 	
-	public List<MetricValue> getBySoftwareEntity(int softwareEntityId){
+	public List<MetricValue> getAll() {
+		EntityManager em = Connection.getEntityManager();
+		TypedQuery<MetricValue> query = em.createQuery("select mv from MetricValue mv", MetricValue.class);		
+		
+		try{
+			List<MetricValue> resp = query.getResultList();
+			em.close();
+			return resp;
+		}catch(NoResultException e){
+			em.close();
+			return null;
+		}
+	}
+	
+	public List<MetricValue> getBySoftwareEntity(int softwareEntityId) {
 		
 		EntityManager em = Connection.getEntityManager();
 		TypedQuery<MetricValue> query = em.createQuery("select mv from MetricValue mv join mv.metric m where mv.softwareEntity.id = :arg0", MetricValue.class);

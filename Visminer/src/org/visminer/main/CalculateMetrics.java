@@ -1,6 +1,7 @@
 package org.visminer.main;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map.Entry;
 
@@ -26,8 +27,7 @@ public class CalculateMetrics {
 		ILocalRepository repositoryService = getRepository(repository);
 		PersistenceFacade persistence = new PersistenceFacade();
 		
-		List<Commit> commits = persistence.getCommitsByRepository(repository.getId());
-		
+		List<Commit> commits = persistence.getCommitsByRepository(repository.getId());		
 		
 		for(Commit commit : commits){
 			for(File file : persistence.getFilesByCommit(commit.getId())){
@@ -50,7 +50,7 @@ public class CalculateMetrics {
 					metricValue.setMetric(metricDb);
 						
 					byte[] data = repositoryService.getFileState(commit.getName(), file.getPath());
-					metricValue.setValue(String.valueOf(metric.getValue().getMetricCls().calculate(data)));
+					metricValue.setValue(String.valueOf(metric.getValue().getMetricCls().calculate(data, file.getPath())));
 					metricsValues.add(metricValue);
 					
 				}

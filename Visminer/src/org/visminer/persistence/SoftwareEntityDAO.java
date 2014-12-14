@@ -8,8 +8,8 @@ import javax.persistence.TypedQuery;
 
 import org.visminer.model.database.SoftwareEntity;
 
-public class SoftwareEntityDAO {
-
+public class SoftwareEntityDAO {	
+	
 	public SoftwareEntity save(SoftwareEntity softwareEntty){
 		
 		EntityManager em = Connection.getEntityManager();

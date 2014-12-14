@@ -4,6 +4,6 @@ public interface IMetric<T> {
 
 	public String getName();
 	public String getDescription();
-	public T calculate(byte[] data);
+	public T calculate(byte[] data, String string);
 	
 }
